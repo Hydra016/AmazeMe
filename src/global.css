@@ -109,6 +109,8 @@ a {
   }
 }
 
+
+
 .container {
   width: 100vw;
   height: 100vw;
@@ -146,6 +148,10 @@ a {
   text-decoration: none;
   font-weight: 600;
   font-size: 20px;
+}
+
+.navbar-link-mobile {
+  display: none;
 }
 
 .navbar-link:hover {
@@ -222,6 +228,10 @@ a {
   align-items: center;
 }
 
+.cart-container-mobile {
+  display: none;
+}
+
 .cart-text {
   margin-right: 20px;
   font-size: 20px;
@@ -264,7 +274,6 @@ a {
 .content {
   width: 100%;
   padding: 50px 100px 50px;
-  padding-right: 100px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -380,4 +389,127 @@ a {
 .about-name {
   font-size: 25px;
   font-weight: 600;
+}
+
+.header-mobile {
+  display: none;
+}
+
+.navbar-links-mobile {
+  display: none;
+}
+
+.menu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  body {
+    position: relative;
+  }
+  .menu {
+    display: block;
+  }
+  .navbar-link-mobile {
+    display: block;
+    color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 1rem;
+
+  }
+  .navbar-links {
+    display: none;
+  }
+  .cart-container {
+    display: none;
+  }
+  .cart-container-mobile {
+    display: block;
+  }
+  .navbar-links-mobile {
+    display: block;
+  }
+  .details-container {
+    display: none;
+  }
+  .header-mobile {
+    display: block;
+  }
+  .mobile-image {
+    width: 30px;
+    height: 30px;
+  }
+  .navbar-mobile-container {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 500px;
+    width: 100%;
+    z-index: 999;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5rem;
+  }
+  .close-icon {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 2.5%;
+    left: 90%;
+  }
+  .heading-container {
+    display: none;
+  }
+
+  .nav-image {
+    height: 350px;
+    object-fit: cover;
+  }
+  .category-heading {
+    padding: 0px;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+  }
+  .content{
+    /* padding: 0px; */
+    all: unset;
+  }
+  .category-heading {
+    font-size: 40px;
+  }
+  .single-item-container {
+    padding: 80px 20px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .single-item-image {
+    width: 400px;
+    height: 400px;
+  }
+  .single-item-heading {
+    font-size: 30px;
+    margin-top: 50px;
+  }
+  .single-item-description {
+    font-size: 20px;
+  }
+  .single-item-price {
+    font-size: 35px;
+  }   
+  .about-container {
+    padding: 80px 20px 50px;
+  }
+  .about-heading {
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
 }

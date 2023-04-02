@@ -1,5 +1,6 @@
 <script>
 	import HeaderImage from './HeaderImage.svelte';
+	import Menu from './Menu.svelte';
 
 	export let dontShowHeaderImg;
 </script>
@@ -55,6 +56,7 @@
 				alt="cart"
 			/>
 		</a>
+		<Menu />
 	</nav>
 
 	{#if !dontShowHeaderImg}
