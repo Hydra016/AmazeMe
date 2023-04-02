@@ -15,7 +15,7 @@ export let data;
         <span class='single-item-description'>{data.product.description}</span>
         <span class='single-item-price'>$ {data.product.price}</span>
         <a class='single-item-button' href='/'>
-        Buy Now
+        Add To Cart
       </a>
       </div>
     </div>
