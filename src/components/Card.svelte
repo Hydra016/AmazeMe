@@ -4,6 +4,7 @@
     export let total;
     export let products;
     import { cartItems, totalPrice } from "../stores";
+    import { fly } from "svelte/transition";
 
 
     const removeFromCart = (id) => {
@@ -14,7 +15,7 @@
 </script>
 
 {#if product}
-<div class="card">
+<div out:fly={{ y:-50 }} class="card">
     <div class="card-img">
       <img class="item-img" src={product.image} alt="product" />
     </div>

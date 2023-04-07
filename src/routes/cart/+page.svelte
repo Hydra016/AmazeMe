@@ -12,6 +12,7 @@
         total += product.price
     })
     totalPrice.subscribe(prev => total = prev)
+    console.log(total)
     </script>
     
     <div in:fly={{ y:50, duration:500, delay: 500 }} out:fly={{ y:50, duration:500 }}>
