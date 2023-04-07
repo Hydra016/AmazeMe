@@ -1,8 +1,10 @@
 <script>
 	import HeaderImage from './HeaderImage.svelte';
 	import Menu from './Menu.svelte';
-
+	import { cartItems } from '../stores';
 	export let dontShowHeaderImg;
+	let items = 0
+	cartItems.subscribe((prev) => items = prev.length)
 </script>
 
 <div>
@@ -48,13 +50,15 @@
 			<a class="navbar-link" href="/electronics">Electronics</a>
 			<a class="navbar-link" href="/about">About</a>
 		</div>
-		<a class="cart-container" href="/">
-			<span class="cart-text">Cart/0.0$</span>
+		<a class="cart-container" href="/cart">
 			<img
 				src="https://cdn-icons-png.flaticon.com/128/649/649931.png"
 				class="cart-icon"
 				alt="cart"
 			/>
+			<div class="items">
+				{items} items
+			</div>
 		</a>
 		<Menu />
 	</nav>

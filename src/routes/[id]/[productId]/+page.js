@@ -1,3 +1,4 @@
+
 export async function load({data, fetch, params}) {
     const response = await fetch('https://fakestoreapi.com/products');
     const products = await response.json()
@@ -7,4 +8,8 @@ export async function load({data, fetch, params}) {
             product: foundProduct,
         }
     }
+}
+
+export const _addToCart = () => {
+    console.log('added')
 }

@@ -50,7 +50,7 @@
 				<a on:click={() => (showMenu = !showMenu)} class="navbar-link-mobile" href="/about">About</a
 				>
 			</div>
-			<a class="cart-container-mobile" href="/">
+			<a class="cart-container-mobile" href="/cart">
 				<span class="cart-text">Cart/0.0$</span>
 				<img
 					src="https://cdn-icons-png.flaticon.com/128/649/649931.png"
