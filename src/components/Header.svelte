@@ -2,6 +2,7 @@
 	import HeaderImage from './HeaderImage.svelte';
 	import Menu from './Menu.svelte';
 	import { cartItems } from '../stores';
+	import { fly } from 'svelte/transition';
 	export let dontShowHeaderImg;
 	let items = 0
 	cartItems.subscribe((prev) => items = prev.length)
@@ -39,9 +40,9 @@
 		</div>
 	</div>
 	<nav class={`navbar ${dontShowHeaderImg ? 'navbar-links-border' : null}`}>
-		<div>
+		<a href="/">
 			<img src="https://cdn-icons-png.flaticon.com/128/4507/4507860.png" class="logo" alt="logo" />
-		</div>
+		</a>
 		<div class="navbar-links">
 			<a class="navbar-link" href="/">Home</a>
 			<a class="navbar-link" href={`/men's clothing`}>Men</a>
@@ -56,9 +57,12 @@
 				class="cart-icon"
 				alt="cart"
 			/>
-			<div class="items">
-				{items} items
+			{#key items}
+			<div in:fly={{ y: -20 }} class="items">
+				{items} 
 			</div>
+			{/key}
+			
 		</a>
 		<Menu />
 	</nav>

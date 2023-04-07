@@ -1,6 +1,10 @@
 <script>
 	import { fly } from 'svelte/transition';
 	let showMenu = false;
+	import { totalPrice } from '../stores';
+	let total = 0;
+	totalPrice.subscribe(prev => total = prev);
+
 </script>
 
 <div class="header-mobile">
@@ -51,7 +55,7 @@
 				>
 			</div>
 			<a class="cart-container-mobile" href="/cart">
-				<span class="cart-text">Cart/0.0$</span>
+				<span class="cart-text">{`Cart/${total.toPrecision(4)}$`}</span>
 				<img
 					src="https://cdn-icons-png.flaticon.com/128/649/649931.png"
 					class="cart-icon"

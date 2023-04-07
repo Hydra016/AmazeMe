@@ -1,6 +1,8 @@
 <script>
 import Header from "../../../components/Header.svelte";
 import Footer from "../../../components/Footer.svelte";
+import Error from "../../../components/Error.svelte";
+
 import { cartItems, totalPrice } from '../../../stores';
 
 import { fly } from 'svelte/transition';
@@ -31,7 +33,8 @@ const addToCart = (product) => {
         </button>
       </div>
     </div>
-    no results
+    {:else}
+    <Error />
     {/if}
     <Footer />
   </div>
